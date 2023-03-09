@@ -1,0 +1,172 @@
+.login {
+  max-width: 1035px;
+  margin: 0 auto;
+  margin-top: rem(110);
+  margin-bottom: rem(190);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  display: flex;
+
+  @media (max-width: 991.98px) {
+    max-width: 767px;
+    margin-top: rem(70);
+    margin-bottom: rem(70);
+
+    &__logo {
+      text-align: center;
+    }
+
+    &__name {
+      text-align: center;
+    }
+
+    &__descr {
+      text-align: center;
+    }
+
+    .form-group {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: math.div(110, 65);
+    text-align: center;
+  }
+
+  &__wrapper {
+    background-color: #fff;
+    width: 1035px;
+    height: 650px;
+    border-radius: 10px;
+    padding: rem(70) 0 rem(100) 0;
+
+    @media (max-width: 767.98px) {
+      padding: rem(35) 0 0 0;
+      height: rem(600);
+    }
+
+    @media (max-width: 479.98px) {
+      padding: rem(30) 0;
+      height: max-content;
+    }
+  }
+
+  p {
+    margin-top: rem(40);
+    text-align: center;
+    color: #a6a0a0;
+    font-weight: 400;
+
+    @media (max-width: 479.98px) {
+      margin-top: 30px;
+    }
+  }
+
+  @media (max-width: 479.98px) {
+    margin-top: 20px;
+    font-size: rem(14);
+  }
+
+  a {
+    color: #0666f7;
+  }
+
+  &__descr {
+    margin-left: rem(51);
+    color: #a6a0a0;
+    font-weight: 400;
+
+    @media (max-width: 991.98px) {
+      margin: 10px auto 0 auto;
+    }
+  }
+
+  &__name {
+    // @include adaptiveValue('font-size', 24, 18);
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: rem(120);
+    margin-left: rem(50);
+    margin-bottom: rem(25);
+
+    @media (max-width: 991.98px) {
+      margin: rem(100) auto 0 auto;
+    }
+
+    @media (max-width: 767.98px) {
+      margin: rem(60) auto 0 auto;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 55px auto 0 auto;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(12, 218, 246, 0.72) 0%, rgba(6, 102, 247, 0.64) 100%);
+    box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
+    border-radius: 15px;
+    width: 400px;
+    padding: rem(8) 0;
+
+    @media (max-width: 767.98px) {
+      width: 255px;
+      padding: rem(8) 0;
+    }
+
+    @media (max-width: 479.98px) {
+      width: rem(200);
+    }
+  }
+
+  .loginform-error {
+    margin-top: 10px;
+    color: #1687f7;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  form {
+    max-width: 520px;
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: 767.98px) {
+      max-width: 400px;
+    }
+
+    @media (max-width: 479.98px) {
+      padding: 0 20px;
+    }
+
+    .form-group {
+      // width: 100%;
+      padding-left: rem(51);
+      margin-top: 30px;
+
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      input {
+        border-bottom: 1px solid #1687f7;
+        color: #57c3f9;
+        width: 100%;
+        padding: 8px 0 4px 0;
+        outline: none;
+
+        font: {
+          size: rem(16);
+          weight: 500;
+        }
+      }
+    }
+  }
+}
+
+input[type='password'] {
+  font-family: Verdana;
+}

@@ -1,0 +1,171 @@
+.header {
+  min-height: 66px;
+  padding: rem(16) 0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+
+  // .header__container
+  @media (max-width: 767.98px) {
+    &__list {
+      display: block;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+  }
+
+  // .header__logo
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  // .header__list
+
+  &__list {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    gap: 20px;
+    align-items: center;
+
+    li {
+      a {
+        color: #7a7a7a;
+        font-weight: 500;
+
+        &:hover {
+          color: #57a2f9;
+        }
+      }
+    }
+  }
+
+  // .header__link
+
+  &__link {
+    &_active {
+      color: #57a2f9 !important;
+      svg {
+        fill: none;
+        path {
+          fill: #57a2f9;
+        }
+      }
+      #user {
+        fill: none;
+
+        circle {
+          stroke: #57a2f9;
+        }
+      }
+    }
+    &:hover {
+      svg {
+        fill: none;
+        path {
+          fill: #57a2f9;
+        }
+      }
+      #user {
+        fill: none;
+
+        circle {
+          stroke: #57a2f9;
+        }
+      }
+    }
+  }
+}
+
+.icon-menu {
+  display: none;
+
+  @media (max-width: 767.98px) {
+    display: block;
+    position: relative;
+    flex: 0 0 30px;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        transform: scale(0);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        top: calc(50% - rem(1));
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        bottom: calc(50% - rem(1));
+      }
+    }
+  }
+}
+
+.menu-open {
+  .header__list {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    background-color: #fff;
+    top: 68px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.signup-btn {
+  background: linear-gradient(269.46deg, #a36da2 0.24%, #59a0c5 96.9%);
+  text-align: center;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
+}

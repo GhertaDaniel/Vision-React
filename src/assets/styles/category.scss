@@ -1,0 +1,112 @@
+.category {
+  min-height: 600px;
+  padding: 40px 0 80px;
+
+  // .category__title
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  // .category__wrapper
+
+  &__wrapper {
+    margin-top: 36px;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    // gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 107px;
+    justify-items: center;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+  }
+
+  @media (max-width: 1200px) {
+    .category {
+      &__wrapper {
+        column-gap: 20px;
+      }
+      &__block {
+        width: 500px;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .category {
+      &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 350px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .category {
+      &__wrapper {
+        grid-template-columns: minmax(320px, 1fr);
+      }
+      &__block {
+        width: 450px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .category {
+      &__block {
+        width: 320px;
+      }
+    }
+  }
+
+  // .category__block
+
+  &__block {
+    // @include adaptiveValue("width", 560, 410);
+    // height: max-content;
+    padding: 0 12px;
+    width: 563px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    // gap: clamp(1rem, 25px, 50px);
+    align-items: center;
+    background: #fffefe;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  // .category__img
+
+  &__img {
+    height: 170px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    // @include adaptiveValue("height", 170, 120);
+    // @include adaptiveValue("padding-top", 35, 0);
+    // @include adaptiveValue("padding-bottom", 35, 0);
+
+    img {
+      //   @include adaptiveValue("width", 270, 240);
+      width: 270px;
+    }
+  }
+
+  // .category__name
+
+  &__name {
+    margin: 0px 30px 20px 30px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}

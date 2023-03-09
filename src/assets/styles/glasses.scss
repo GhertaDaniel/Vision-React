@@ -1,0 +1,226 @@
+.glasses {
+  margin-top: 40px;
+  margin-bottom: 45px;
+
+  // .glasses__title
+
+  &__title {
+    @media (max-width: 767.98px) {
+      text-align: center;
+    }
+
+    margin-top: 25px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  // .glasses__wrapper
+
+  &__wrapper {
+    margin-top: 25px;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    justify-items: center;
+  }
+}
+
+.swiper-slide {
+  img {
+    width: 100%;
+    position: relative;
+  }
+
+  &:first-child {
+    h1 {
+      position: absolute;
+      @include adaptiveValue('top', 50, 35);
+      left: 50%;
+      transform: translateX(-50%);
+      @include adaptiveValue('font-size', 40, 12);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    h3 {
+      position: absolute;
+      @include adaptiveValue('top', 90, 50);
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      @include adaptiveValue('font-size', 36, 12);
+      font-weight: 700;
+    }
+  }
+
+  &:nth-child(2) {
+    div {
+      position: absolute;
+      @include adaptiveValue('top', 260, 30);
+      @include adaptiveValue('left', 50, 30);
+      text-align: center;
+
+      p {
+        @include adaptiveValue('font-size', 36, 12);
+        color: black;
+        text-transform: uppercase;
+        font-family: Metrophobic;
+      }
+
+      span {
+        font-family: Pacifico;
+        color: #ef3a7f;
+        text-transform: uppercase;
+        @include adaptiveValue('font-size', 36, 10);
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    #logo {
+      position: absolute;
+      top: 0;
+      @include adaptiveValue('right', 70, 30);
+      @include adaptiveValue('width', 160, 60);
+    }
+  }
+
+  &:last-child {
+    div {
+      position: absolute;
+      @include adaptiveValue('bottom', 270, 45);
+      @include adaptiveValue('left', 60, 30);
+      color: #fff;
+
+      h3 {
+        text-transform: uppercase;
+        font-family: Mitr;
+        @include adaptiveValue('font-size', 36, 12);
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-family: Mitr;
+        @include adaptiveValue('font-size', 48, 16);
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #fcfcfc;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  &-active {
+    background-color: black;
+    border: 3px solid #fcfcfc;
+  }
+}
+
+.swiper-button-prev {
+  @include adaptiveValue('left', 50, 25);
+}
+
+.swiper-button-next {
+  @include adaptiveValue('right', 50, 25);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #151515;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  @include adaptiveValue('font-size', 40, 20);
+}
+
+.card {
+  // @include adaptiveValue("width", 270, 200);
+  width: 270px;
+  text-align: center;
+  padding: 24px 0px 20px 0px;
+  margin-bottom: 25px;
+  background: #fffefe;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+
+  // .card__img
+
+  &__img {
+    // margin: 35px 0 55px 0;
+    cursor: pointer;
+    height: 214px;
+    height: 214px;
+    // @include adaptiveValue("height", 214, 150);
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  // .card__descr
+
+  &__descr {
+    font-weight: 500;
+  }
+
+  // .card__model
+
+  &__model {
+    margin-bottom: 20px;
+  }
+
+  // .card__price
+
+  &__price {
+    margin-bottom: 25px;
+  }
+
+  // .card__favorite
+
+  &__button {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .card__button
+
+  &__favorite {
+    background-color: #e7e3e3;
+    padding: 10px;
+  }
+
+  // .card__add
+
+  &__add {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 6px;
+    button {
+      text-transform: uppercase;
+    }
+
+    svg {
+      width: 20px;
+    }
+  }
+}
