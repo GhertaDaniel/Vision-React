@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Square Sunglasses",
+    "price": 32.95,
+    "category": "sunglasses",
+    "image": "/images/sunglasses/sunglasses-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Premium Cat-Eye Sunglasses",
+    "price": 39.95,
+    "category": "sunglasses",
+    "image": "/images/sunglasses/sunglasses-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Premium Tint Sunglasses",
+    "price": 29.95,
+    "category": "sunglasses",
+    "image": "/images/sunglasses/sunglasses-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Premium Aviator Sunglasses",
+    "price": 39.95,
+    "category": "sunglasses",
+    "image": "/images/sunglasses/sunglasses-4.png"
+  },
+  {
+    "id": 5,
+    "name": "Premium Square Sunglasses",
+    "price": 23.95,
+    "category": "prescription-frames",
+    "image": "/images/sunglasses/prescription-1.png"
+  },
+  {
+    "id": 6,
+    "name": "Premium Square Sunglasses",
+    "price": 32.95,
+    "category": "prescription-frames",
+    "image": "/images/sunglasses/prescription-2.png"
+  },
+  {
+    "id": 7,
+    "name": "Premium Square Sunglasses",
+    "price": 23.95,
+    "category": "prescription-frames",
+    "image": "/images/sunglasses/prescription-3.png"
+  },
+  {
+    "id": 8,
+    "name": "Premium Square Sunglasses",
+    "price": 35.95,
+    "category": "prescription-frames",
+    "image": "/images/sunglasses/prescription-4.png"
+  },
+  {
+    "id": 9,
+    "name": "Premium Square Sunglasses",
+    "price": 39.95,
+    "category": "protective-eyeware",
+    "image": "/images/sunglasses/protective-1.png"
+  },
+  {
+    "id": 10,
+    "name": "Premium Square Sunglasses",
+    "price": 27.95,
+    "category": "protective-eyeware",
+    "image": "/images/sunglasses/protective-2.png"
+  },
+  {
+    "id": 11,
+    "name": "Premium Square Sunglasses",
+    "price": 45.95,
+    "category": "protective-eyeware",
+    "image": "/images/sunglasses/protective-3.png"
+  },
+  {
+    "id": 12,
+    "name": "Premium Square Sunglasses",
+    "price": 9.95,
+    "category": "protective-eyeware",
+    "image": "/images/sunglasses/protective-4.png"
+  }
+]
