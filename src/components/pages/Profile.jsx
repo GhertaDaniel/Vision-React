@@ -2,19 +2,21 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { redirect, useNavigate } from 'react-router-dom';
 import { fetchAuthMe, selectIsAuth, logout } from '../../store/auth/auth';
+import { useCookies } from 'react-cookie';
 
 const Profile = () => {
   const user = useSelector((state) => state.auth.data);
   const [isEditable, setIsEditable] = React.useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [_, __, removeCookie] = useCookies();
 
   React.useEffect(() => {
     dispatch(fetchAuthMe);
   }, []);
 
   const logOut = () => {
-    window.localStorage.removeItem('token');
+    removeCookie('login-token', { path: '/' });
     dispatch(logout());
     navigate('/');
   };

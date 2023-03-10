@@ -48,10 +48,6 @@ const Register = () => {
     if (!data.payload) {
       alert("can't register");
     }
-
-    if ('token' in data.payload) {
-      window.localStorage.setItem('token', data.payload.token);
-    }
   };
 
   if (isAuth) {

@@ -25,10 +25,6 @@ const Login = () => {
     if (!data.payload) {
       alert('cant login');
     }
-
-    if ('token' in data.payload) {
-      window.localStorage.setItem('token', data.payload.token);
-    }
   };
   if (isAuth) {
     return <Navigate to="/" />;
