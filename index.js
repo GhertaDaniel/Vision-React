@@ -5,6 +5,7 @@ import fs from 'fs';
 import mongoose from 'mongoose';
 import { UserController } from './controllers/UserController.js';
 import multer from 'multer';
+import cookieParser from 'cookie-parser';
 
 import {
   handleValidationErrors,
@@ -38,6 +39,7 @@ const upload = multer({ storage });
 
 app.set('trust proxy', 1);
 
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors(corsConfig));
 app.use('/uploads', express.static('uploads'));

@@ -19,21 +19,18 @@ export const register = async (req, res) => {
 
     const user = await doc.save();
 
-    const token = jwt.sign(
-      {
-        _id: user._id,
-      },
-      process.env.ACCESS_TOKEN_SECRET,
-      {
-        expiresIn: '30d',
-      },
-    );
+    // const token = jwt.sign(
+    //   {
+    //     _id: user._id,
+    //   },
+    //   process.env.ACCESS_TOKEN_SECRET,
+    //   {
+    //     expiresIn: '30d',
+    //   },
+    // );
     const { password, confirmPassword, ...userData } = user._doc;
 
-    res.json({
-      ...userData,
-      token,
-    });
+    res.json({ ...userData });
   } catch (err) {
     console.log('register Err', err);
     res.status(500).json({
@@ -70,7 +67,12 @@ export const login = async (req, res) => {
 
     const { password, ...userData } = user._doc;
 
-    res.json({ ...userData, token });
+    // res.json({ ...userData, token });
+    res
+      .cookie('login-token', token, {
+        maxAge: 4 * 60 * 60 * 1000, // 1h
+      })
+      .json({ ...userData });
   } catch (err) {
     console.log('Failed to login ', err);
     res.status(500).json({
